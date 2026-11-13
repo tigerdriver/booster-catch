@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#05070c"/>
+      <stop offset="1" stop-color="#14233f"/>
+    </linearGradient>
+    <linearGradient id="flame" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff1c9"/>
+      <stop offset="0.45" stop-color="#ffa24a"/>
+      <stop offset="1" stop-color="#ff6a1a"/>
+    </linearGradient>
+    <linearGradient id="hull" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="1" stop-color="#b9c0cc"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" fill="url(#sky)"/>
+  <g fill="#dfe8ff">
+    <circle cx="130" cy="120" r="3"/><circle cx="182" cy="84" r="2"/><circle cx="356" cy="104" r="3"/>
+    <circle cx="396" cy="176" r="2"/><circle cx="110" cy="214" r="2"/><circle cx="330" cy="70" r="2"/>
+  </g>
+  <path d="M222 356 L290 356 L256 456 Z" fill="url(#flame)"/>
+  <rect x="224" y="108" width="64" height="256" rx="6" fill="url(#hull)"/>
+  <rect x="224" y="96" width="64" height="24" rx="6" fill="#34383f"/>
+  <rect x="224" y="244" width="64" height="20" fill="#1c2f52"/>
+  <rect x="224" y="312" width="64" height="26" fill="#1c2f52"/>
+  <rect x="224" y="302" width="64" height="8" fill="#e8702a"/>
+  <rect x="224" y="344" width="64" height="20" fill="#34383f"/>
+  <rect x="220" y="160" width="72" height="12" fill="#7fd6ff"/>
+  <path d="M92 150 L222 158 L222 182 L92 202 Z" fill="#7b8698"/>
+  <path d="M420 150 L290 158 L290 182 L420 202 Z" fill="#5d6778"/>
+  <rect x="92" y="150" width="130" height="5" fill="#7fd6ff" transform="rotate(3.5 92 150)"/>
+  <rect x="290" y="158" width="130" height="5" fill="#7fd6ff" transform="rotate(-3.5 420 150)"/>
+</svg>

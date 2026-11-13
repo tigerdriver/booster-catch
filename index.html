@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta name="theme-color" content="#05070c" />
+    <title>Booster Catch</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="icon" href="./icons/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./icons/icon-180.png" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Booster Catch" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@400;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap"
+    />
+    <script type="module" crossorigin src="./assets/index-BquTR-JE.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-Bug0t1WL.css">
+  </head>
+  <body>
+    <div id="stage" aria-label="ゲーム画面。タップでアームを閉じる"></div>
+
+    <div class="hud">
+      <div class="block"><span class="label">Score</span><span class="num big" id="score">0</span></div>
+      <div class="block right"><span class="label">Best</span><span class="num big" id="best">0</span></div>
+    </div>
+    <div class="streak">
+      <div class="label">連続キャッチ</div>
+      <div class="num" id="streak">0</div>
+    </div>
+
+    <button id="soundBtn" class="sound-toggle" type="button"></button>
+
+    <div class="tele">
+      <div class="block"><span class="label">降下速度</span><span class="num" id="vel">0.0 m/s</span></div>
+      <div class="hint">タップ / Space でアームを閉じる</div>
+      <div class="block right"><span class="label">キャッチ点まで</span><span class="num" id="dist">+0.0 m</span></div>
+    </div>
+
+    <div id="judge">
+      <div class="word" id="judgeWord"></div>
+      <div class="sub" id="judgeSub"></div>
+    </div>
+    <div id="round">
+      <div class="num" id="roundText">CATCH 01</div>
+      <div class="sub">メガブースター帰還中</div>
+    </div>
+
+    <div id="catchCard" aria-live="polite">
+      <div class="cc-head">
+        <span class="cc-word" id="ccWord">PERFECT</span><span class="num cc-gain" id="ccGain">+0</span>
+      </div>
+      <div class="meter">
+        <div class="zone z2"></div>
+        <div class="zone z1"></div>
+        <div class="center"></div>
+        <div class="dot" id="ccDot"></div>
+      </div>
+      <div class="meter-labels"><span>早い</span><span>遅い</span></div>
+      <dl class="cc-rows">
+        <div><dt>タイミング</dt><dd id="ccTime">—</dd></div>
+        <div><dt>ずれ</dt><dd id="ccOff">—</dd></div>
+        <div><dt>通過速度</dt><dd id="ccVel">—</dd></div>
+        <div><dt>得点</dt><dd id="ccCalc">—</dd></div>
+      </dl>
+    </div>
+
+    <div id="launchText"></div>
+    <div id="skipHint">タップでスキップ</div>
+
+    <div id="goldFlash"></div>
+    <div id="flash"></div>
+    <div id="fade"></div>
+
+    <div class="overlay" id="titleView">
+      <div class="card">
+        <div class="eyebrow">Catch mode</div>
+        <h1>Booster Catch</h1>
+        <p>
+          スペースクルーザーを打ち上げて戻ってくるメガブースターを、発射塔のアームで受け止めます。塔の青いラインと、機体の青いリングが重なった瞬間が合図です。
+        </p>
+        <div class="keys">
+          <div><span>アームを閉じる</span><span>タップ / Space</span></div>
+          <div><span>判定</span><span>PERFECT ±0.5 m</span></div>
+          <div><span>失敗</span><span>1回でゲームオーバー</span></div>
+        </div>
+        <button id="startBtn" type="button">Start</button>
+      </div>
+    </div>
+
+    <div class="overlay" id="overView" hidden>
+      <div class="card">
+        <div class="eyebrow" id="overReason">Booster lost</div>
+        <span class="newbest" id="newBest" hidden>New best</span>
+        <div class="stats">
+          <div><div class="label">連続キャッチ</div><div class="num" id="overStreak">0</div></div>
+          <div><div class="label">Score</div><div class="num" id="overScore">0</div></div>
+        </div>
+        <button id="retryBtn" type="button">Retry</button>
+      </div>
+    </div>
+
+  </body>
+</html>
